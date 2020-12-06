@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+int x1 = 0, y1 = 0, r1 = 0, d, x, y;
+cout << "Cin x1, y1, r1: ";
+cin >> x1; cin >> y1; cin >> r1;
+int x2 = 0, y2 = 0, r2 = 0;
+cout << "Cin x2, y2, r2: ";
+cin >> x2; cin >> y2; cin >> r2;
+x = abs(x1 - x2);
+y = abs(y1 - y2);
+d = pow(pow(x, 2) + pow(y, 2), 0.5);
+if (d == 0) {
+if ( r1 == r2 ) {
+cout << "infinity of number point of contact!" << endl;
+}
+else {
+cout << "No" << endl;
+}
+}
+else {
+if (r1 + r2 == d || d + r2 == r1 || d + r1 == r2) {
+cout << "Yes(1)" << endl;
+}
+else if (r1 + r2 > d && d + r2 > r1 && d + r1 > r2) {
+cout << "Yes(2)" << endl;
+}
+else {
+cout << "No" << endl;
+}
+}
+}
